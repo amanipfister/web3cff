@@ -42,6 +42,7 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
+      {/* TODO: Mobileversion Navigation */}
     </div>
   );
 };
