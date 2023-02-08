@@ -10,7 +10,6 @@ const App = () => {
       <div className="sm:flex hidden mr-10 relative">
         <Sidebar />
       </div>
-      <h1 className="font-xl font-bold">TEST</h1>
       <div className="flex-1 max-sm:w-full max-w-[1280] mx-auto sm:pr-5">
         <Navbar />
         <Routes>

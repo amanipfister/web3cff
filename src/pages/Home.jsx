@@ -5,11 +5,11 @@ import { useStateContext } from "../context";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [campaigns, setCampaigns] = useState([]);
-  const { address, contract, getCampaign } = useStateContext();
+  const { address, contract, getCampaigns } = useStateContext();
 
   const fetchCampaigns = async () => {
     setIsLoading(true);
-    const data = await getCampaign();
+    const data = await getCampaigns();
     setCampaigns(data);
     setIsLoading(false);
   };
@@ -18,11 +18,13 @@ const Home = () => {
     if (contract) fetchCampaigns();
   }, [address, contract]);
 
-  return <DisplayCampaigns 
-  title='All Campaigns'
-  isLoading={isLoading}
-  campaigns={campaigns}
-  />;
+  return (
+    <DisplayCampaigns
+      title="All Campaigns"
+      isLoading={isLoading}
+      campaigns={campaigns}
+    />
+  );
 };
 
 export default Home;
